@@ -1,0 +1,36 @@
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+
+header {
+    background-color: white;
+}
+
+.navbar {
+    margin: 0 auto;
+    max-width: 70rem;
+    display: flex;
+    justify-content: space-between;
+
+    .logo__container{
+        display: flex;
+        align-items: center;
+    }
+
+    .nav__links {
+        display: flex;
+        justify-content: space-between;
+        width: 32%;
+
+        .nav__link {
+            color: $dark-grayish-blue;
+            list-style: none;
+    
+            a {
+                color: $dark-grayish-blue;
+                text-decoration: none;
+            }
+        }
+    }
+
+
+}
