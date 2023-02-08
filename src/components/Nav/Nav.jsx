@@ -1,6 +1,7 @@
 import logo from "../../assets/logo.svg"
 import { Link } from "react-router-dom";
 import "./index.scss"
+import mobileHamburger from "../../assets/icon-menu.svg"
 
 
 function Navbar() {
@@ -11,6 +12,7 @@ function Navbar() {
                 <a href="/" className="logo__container">
                     <img src={logo} alt="logo" />
                 </a>
+                <img className="mobile__menu" src={mobileHamburger} alt="mobile menu" />
                 <ul className="nav__links">
                     <li className="nav__link"><Link to="/">Home</Link></li>
                     <li className="nav__link"><Link to="/new">New</Link></li>

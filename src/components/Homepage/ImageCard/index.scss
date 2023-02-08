@@ -1,0 +1,77 @@
+$off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+$soft-red: hsl(5, 85%, 63%);
+
+@mixin mobile {
+    @media screen and (max-width: 376px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and (max-width: 1150px) {
+        @content
+    }
+};
+
+.image__card--container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+}
+
+.image__card{
+    display: flex;
+    gap: 1rem;
+    max-width: 17rem;
+    height: 75%;
+
+    @include mobile {
+        max-width: 20rem;
+    }
+
+    img {
+        width: 50%;
+
+        @include mobile {
+            width: 40%;
+        }
+    }
+
+    span,
+    p {
+        margin: 0;
+    }
+
+    .image__card--index {
+        font-size: 1.5rem;
+        color: $grayish-blue;
+    }
+
+    .image__card--content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image__card--title {
+        font-size: .9rem;
+        font-weight: 700;
+        color: #000;
+        margin-bottom: .5rem;
+        transition: .6s;
+        text-decoration: none;
+
+        &:hover {
+            color: $soft-red;
+        }
+    }
+
+    .image__card--text {
+        font-size: .6rem;
+    }
+}

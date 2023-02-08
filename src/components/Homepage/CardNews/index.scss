@@ -6,9 +6,26 @@ $grayish-blue: hsl(233, 8%, 79%);
 $dark-grayish-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
 
+@mixin mobile {
+    @media screen and (max-width: 376px) {
+        @content
+    }
+};
+
+@mixin tablet {
+    @media screen and (max-width: 1150px) {
+        @content
+    }
+};
+
+
 .cards__container {
     background-color: #000;
     padding: 2rem 1rem;
+
+    @include mobile {
+        margin-top: 3.5rem;
+    }
 
     .cards__title {
         color: $soft-orange;
