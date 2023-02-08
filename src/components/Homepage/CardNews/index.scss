@@ -1,0 +1,40 @@
+$soft-orange: hsl(35, 77%, 62%);
+$soft-red: hsl(5, 85%, 63%);
+
+$off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+
+.cards__container {
+    background-color: #000;
+    padding: 2rem 1rem;
+
+    .cards__title {
+        color: $soft-orange;
+        font-size: 1.625rem;
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        color: #fff;
+        margin: 0;
+    }
+
+    .card__container {
+        padding-bottom: 1rem;
+        padding-top: 1.5rem;
+        border-bottom: 1px solid $dark-grayish-blue;
+    }
+
+    .card__title {
+        font-weight: 700;
+        margin-bottom: .5rem;
+    }
+
+    .card__text {
+        font-weight: 400;
+        font-size: .75rem;
+    }
+}

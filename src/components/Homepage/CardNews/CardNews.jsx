@@ -1,4 +1,5 @@
 import React from 'react'
+import './index.scss'
 
 const miniNews = [
   {
@@ -23,9 +24,9 @@ const CardNews = () => {
     <div className='cards__container'>
       <p className='cards__title'>New</p>
       {miniNews.map((miniNew) => (
-        <div key={miniNew.id}>
-          <p>{miniNew.title}</p>
-          <p>{miniNew.description}</p>
+        <div className='card__container' key={miniNew.id}>
+          <p className='card__title'>{miniNew.title}</p>
+          <p className='card__text'>{miniNew.description}</p>
         </div>
       ))}
     </div>

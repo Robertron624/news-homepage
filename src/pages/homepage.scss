@@ -1,0 +1,53 @@
+$soft-orange: hsl(35, 77%, 62%);
+$soft-red: hsl(5, 85%, 63%);
+
+$off-white: hsl(36, 100%, 99%);
+$grayish-blue: hsl(233, 8%, 79%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
+$very-dark-blue: hsl(240, 100%, 5%);
+
+
+.container {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding-top: 2rem;
+}
+
+.top__page{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    column-gap: 1rem;
+
+    .hero__container img {
+        width: 100%;
+    }
+
+    .main__new {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-top: 1rem;
+
+        .main__new--title {
+            font-size: 2.5rem;
+        }
+
+        .main__new--body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            p {
+                font-size: .75rem;
+            }
+
+            button {
+                background-color: $soft-red;
+                cursor: pointer;
+                border: 1px solid $soft-red;
+                width: 50%;
+                padding: .5rem 0;
+            }
+        }
+    }
+}
+
