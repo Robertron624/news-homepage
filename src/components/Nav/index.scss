@@ -2,6 +2,7 @@ $dark-grayish-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
 $soft-orange: hsl(35, 77%, 62%);
 
+
 @mixin mobile {
     @media screen and (max-width: 376px) {
         @content
@@ -20,6 +21,45 @@ header {
     padding-top: 1rem;
 }
 
+.menu {
+    width: 66%;
+    height: 100vh;
+    background-color: #fff;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    overflow: auto;
+    z-index: 99999;
+
+    .close__container {
+        padding: 1rem 1rem;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav__links {
+        list-style: none;
+        
+        .nav__link {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: inherit;
+}
+
+
 .navbar {
     margin: 0 auto;
     max-width: 70rem;
@@ -31,15 +71,18 @@ header {
         align-items: center;
     }
 
-    .mobile__menu {
+    .burger-menu {
         display: none;
 
-        height: 20px;
-        width: 35px;
-        margin: auto 0;
-
         @include mobile {
-            display: inline-flex;
+            display: flex;
+            align-items: center;
+        }
+
+        .mobile__menu {
+            height: 20px;
+            width: 35px;
+            margin: auto 0;
         }
     }
 
