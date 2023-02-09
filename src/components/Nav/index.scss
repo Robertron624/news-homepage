@@ -28,8 +28,9 @@ header {
     position: absolute;
     right: 0%;
     top: 0;
-    overflow: auto;
+    overflow: hidden;
     z-index: 99999;
+    transition: 1s ;
 
     .close__container {
         padding: 1rem 1rem;
@@ -52,13 +53,12 @@ header {
 }
 
 .hidden {
-    display: none;
+    width: 0;
 }
 
 .visible {
     display: inherit;
 }
-
 
 .navbar {
     margin: 0 auto;
